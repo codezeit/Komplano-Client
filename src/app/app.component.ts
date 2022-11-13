@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendService } from './services/backend';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'komplano-cli';
+  users: any;
+
+  constructor(private backendService: BackendService) { }
+
+  ngOnInit() {
+    this.backendService.getUsers().subscribe(data => {
+      this.users = data;
+    });
+  }
 }

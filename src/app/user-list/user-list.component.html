@@ -1,0 +1,14 @@
+<!-- user list -->
+<div class="user-list">
+    <h2>Users</h2>
+    <ul>
+        <!-- users is an observable -->
+        <!-- *ngFor is a structural directive -->
+        
+        <li *ngFor="let user of users | async">
+            <a [routerLink]="['/user', user.id]">
+                {{user.name}}
+            </a>
+        </li>   
+    </ul>
+</div>
