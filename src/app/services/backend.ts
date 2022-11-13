@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 
 export class BackendService {
-    private baseUrl = 'http://localhost:8000/';
+    private baseUrl = '/api/';
 
     constructor(private http: HttpClient) { }
 

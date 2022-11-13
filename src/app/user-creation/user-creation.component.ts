@@ -10,7 +10,7 @@ export class UserCreationComponent implements OnInit {
   
   public user: IUser = {
     id: 0,
-    name: '',
+    username: '',
     email: '',
     password: ''
   };

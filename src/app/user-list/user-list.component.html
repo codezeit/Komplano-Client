@@ -7,7 +7,7 @@
         
         <li *ngFor="let user of users | async">
             <a [routerLink]="['/user', user.id]">
-                {{user.name}}
+                {{user.username}}
             </a>
         </li>   
     </ul>
